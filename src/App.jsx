@@ -9,11 +9,12 @@ function App() {
     const sanitizedValue = inputValue.replace(/\s/g, '');
     setInputValue(inputValue);
     setSanitizedValue(sanitizedValue);
+    navigator.clipboard.writeText(sanitizedValue);
   };
 
   return (
     <main>
-      <label htmlFor="input-field">Input Sentence:</label>
+      <label htmlFor="input-field">Input Sentence: </label>
       <input
         type="text"
         id="input-field"
